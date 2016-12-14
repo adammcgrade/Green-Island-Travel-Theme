@@ -1,0 +1,42 @@
+/*
+	Theme Name: Green Island Travel and Tours
+	Theme URI: http://www.greenislandtravel.com.au
+	Description: This is a child theme created for the Genesis Framework, build for Green Island Travel and Tours Travel Agency.
+	Author: Adam McGrade
+	Author URI: http://www.adammcgrade.com/
+	Version: 1.0.0
+	
+	Tags: 
+	Text Domain: green-island-travel-and-tours
+	
+	Template: genesis
+	Template Version: 1.7.1
+	License: GNU General Public License v3.0
+	License URI: http://www.opensource.org/licenses/gpl-license.php
+*/
+
+
+/* # Table of Contents 
+	
+- HTML5 Reset
+	- Baseline Normalize
+	- Box Sizing
+	- Float Clearing
+- Defaults
+	- Typographical Elements
+	- Headings
+	- Objects
+	- Gallery
+	- Forms
+	- Tables
+	- Screen Reader Text
+- Structure and Layout
+
+*/
+
+
+@import 'site-variables/colours';
+@import 'site-variables/typography';
+@import 'base/reset';
+@import 'base/defaults';
+@import 'layout/structure';
