@@ -1,8 +1,21 @@
-/* Structure - base 
--------------------------------------------------------------------------------------- */
+/* # Structure and Layout
+---------------------------------------------------------------------------------------------------- */
 
-.site-header,
-.site-inner,
-.site-footer {
-	
+/* ## Global Stucture
+--------------------------------------------- */
+
+// .site-header,
+// .site-inner,
+// .site-footer {
+// 	padding: 0 1em;
+// }
+
+.wrap {
+	max-width: $site-max-content-width;
+	margin: 0 auto;
+}
+
+.wrap,
+.content-sidebar-wrap {
+	padding: 0 1em;
 }

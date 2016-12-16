@@ -30,13 +30,27 @@
 	- Forms
 	- Tables
 	- Screen Reader Text
+	- Skip Links	
+	- Wordpress Defaults
+	- Genesis Defaults
 - Structure and Layout
-
+	- Global Structure
+	- Header
+	- Navigation
+	- Footer
+	- Full Width Pages
 */
 
 
 @import 'site-variables/colours';
 @import 'site-variables/typography';
+@import 'site-variables/layout';
 @import 'base/reset';
 @import 'base/defaults';
+@import 'base/wordpress';
+@import 'base/genesis';
 @import 'layout/structure';
+@import 'layout/header';
+@import 'layout/navigation';
+@import 'layout/footer';
+@import 'layout/full-width';

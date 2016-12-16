@@ -1,9 +1,23 @@
+// Global
+$brand-primary: #539D39;
+
 // Body
 $site-bgcolour: #fff;
 
 // Body Text
-$default-text-colour: #333;
+$default-text-colour: #444;
+$default-heading-text-colour: #0D0D0D;
 
 // Links
 $default-link-colour: blue;
 $default-link-colour-active: darken($default-link-colour, 25%);
+
+// Site Header
+$header-bgcolour: #fff;
+
+// Site Navigation
+$navbar-bgcolour: $brand-primary;
+$navbar-dropdown-bgcolour: #fff;
+$nav-links-colour: #fff;
+$navbar-dropdown-links-colour: $default-text-colour;
+$navbar-dropdown-links-active-colour: $brand-primary;

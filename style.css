@@ -28,8 +28,15 @@
 	- Forms
 	- Tables
 	- Screen Reader Text
+	- Skip Links	
+	- Wordpress Defaults
+	- Genesis Defaults
 - Structure and Layout
-
+	- Global Structure
+	- Header
+	- Navigation
+	- Footer
+	- Full Width Pages
 */
 /* # HTML5 Reset
 ---------------------------------------------------------------------------------------------------- */
@@ -240,8 +247,8 @@ html {
 
 body {
   background-color: #fff;
-  color: #333;
-  font-family: "Open Sans", sans-serif;
+  color: #444;
+  font-family: "Source Sans Pro", sans-serif;
   -webkit-font-smoothing: antialiased;
   font-weight: 400;
   line-height: 1.5;
@@ -269,7 +276,7 @@ a:focus {
   text-decoration: underline; }
 
 p {
-  margin: 0 0 28px;
+  margin: 0 0 1.3em;
   padding: 0; }
 
 ol,
@@ -303,7 +310,6 @@ blockquote {
 blockquote::before {
   content: "\201C";
   display: block;
-  font-size: 30px;
   font-size: 3rem;
   height: 0;
   left: -20px;
@@ -318,34 +324,43 @@ h3,
 h4,
 h5,
 h6 {
-  font-family: 'Source Sans Pro', sans-serif;
-  font-weight: 600;
+  font-family: "Source Sans Pro", sans-serif;
+  font-weight: 700;
   line-height: 1.2;
-  margin: 0 0 10px; }
+  color: #0D0D0D;
+  margin: 0 0 0.75rem; }
 
 h1 {
-  font-size: 36px;
-  font-size: 3.6rem; }
+  font-size: 2em; }
 
 h2 {
-  font-size: 30px;
-  font-size: 3rem; }
+  font-size: 1.625em; }
 
 h3 {
-  font-size: 24px;
-  font-size: 2.4rem; }
+  font-size: 1.375em; }
 
 h4 {
-  font-size: 20px;
-  font-size: 2rem; }
+  font-size: 1.125em; }
 
 h5 {
-  font-size: 18px;
-  font-size: 1.8rem; }
+  font-size: 1.025em; }
 
 h6 {
-  font-size: 16px;
-  font-size: 1.6rem; }
+  font-size: 1em; }
+
+@media screen and (min-width: 50em) {
+  h1 {
+    font-size: 4.232em; }
+  h2 {
+    font-size: 3.175em; }
+  h3 {
+    font-size: 2.369em; }
+  h4 {
+    font-size: 1.7777em; }
+  h5 {
+    font-size: 1.333em; }
+  h6 {
+    font-size: 1em; } }
 
 /* ## Objects
 --------------------------------------------- */
@@ -427,8 +442,7 @@ textarea {
   background-color: #fff;
   border: 1px solid #ddd;
   color: #333;
-  font-size: 18px;
-  font-size: 1.8rem;
+  font-size: 1em;
   font-weight: 400;
   padding: 16px;
   width: 100%; }
@@ -459,8 +473,7 @@ input[type="submit"],
   border: 0;
   color: #fff;
   cursor: pointer;
-  font-size: 16px;
-  font-size: 1.6rem;
+  font-size: 1em;
   font-weight: 700;
   padding: 16px 24px;
   text-decoration: none;
@@ -575,5 +588,318 @@ th:first-child {
 .more-link {
   position: relative; }
 
-/* Structure - base 
--------------------------------------------------------------------------------------- */
+/* # Skip Links
+---------------------------------------------------------------------------------------------------- */
+.genesis-skip-link {
+  margin: 0; }
+
+.genesis-skip-link li {
+  height: 0;
+  width: 0;
+  list-style: none; }
+
+/* Display outline on focus */
+:focus {
+  color: #333;
+  outline: #ccc solid 1px; }
+
+/* ## WordPress
+--------------------------------------------- */
+a.aligncenter img {
+  display: block;
+  margin: 0 auto; }
+
+a.alignnone {
+  display: inline-block; }
+
+.alignleft {
+  float: left;
+  text-align: left; }
+
+.alignright {
+  float: right;
+  text-align: right; }
+
+a.alignleft,
+a.alignnone,
+a.alignright {
+  max-width: 100%; }
+
+img.centered,
+.aligncenter {
+  display: block;
+  margin: 0 auto 24px; }
+
+img.alignnone,
+.alignnone {
+  margin-bottom: 12px; }
+
+a.alignleft,
+img.alignleft,
+.wp-caption.alignleft {
+  margin: 0 24px 24px 0; }
+
+a.alignright,
+img.alignright,
+.wp-caption.alignright {
+  margin: 0 0 24px 24px; }
+
+.wp-caption-text {
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 0;
+  text-align: center; }
+
+.entry-content p.wp-caption-text {
+  margin-bottom: 0; }
+
+.entry-content .wp-audio-shortcode,
+.entry-content .wp-playlist,
+.entry-content .wp-video {
+  margin: 0 0 28px; }
+
+/* ## Genesis
+--------------------------------------------- */
+.breadcrumb {
+  background-color: #fff;
+  font-size: 1.6rem;
+  margin-bottom: 1px;
+  padding: 12px 30px; }
+
+.after-entry,
+.archive-description,
+.author-box {
+  background-color: #fff;
+  font-size: 1.8rem;
+  margin-bottom: 40px;
+  padding: 60px; }
+
+.archive-description p:last-child,
+.author-box p:last-child {
+  margin-bottom: 0; }
+
+/* # Structure and Layout
+---------------------------------------------------------------------------------------------------- */
+/* ## Global Stucture
+--------------------------------------------- */
+.wrap {
+  max-width: 75em;
+  margin: 0 auto; }
+
+.wrap,
+.content-sidebar-wrap {
+  padding: 0 1em; }
+
+/* ## Header
+--------------------------------------------- */
+.site-header {
+  background-color: #fff; }
+  .site-header .site-logo {
+    width: 150px; }
+
+.js nav.nav-primary,
+.js .site-header nav {
+  display: none;
+  position: relative; }
+
+.js .site-header nav .wrap {
+  padding: 0; }
+
+.js nav.pagination {
+  display: block; }
+
+.js nav.nav-primary,
+nav.nav-primary {
+  padding-bottom: 1em; }
+
+.menu-toggle,
+.sub-menu-toggle {
+  border-width: 0;
+  background-color: #539D39;
+  color: #fff;
+  display: block;
+  margin: 0 auto;
+  overflow: hidden;
+  text-align: center;
+  visibility: visible; }
+
+.sub-menu-toggle:hover,
+.sub-menu-toggle:focus {
+  border-width: 0; }
+
+.menu-toggle {
+  line-height: 20px;
+  position: relative;
+  right: 0;
+  z-index: 1000;
+  width: 100%; }
+
+.site-header .menu-toggle {
+  border: 0; }
+
+.menu-toggle:before,
+.menu-toggle.activated:before {
+  margin-right: 10px;
+  text-rendering: auto;
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0); }
+
+.sub-menu-toggle {
+  float: right;
+  padding: 10px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 100; }
+
+.sub-menu-toggle:before {
+  display: inline-block;
+  text-rendering: auto;
+  -webkit-transform: translate(0, 0);
+  transform: translate(0, 0); }
+
+.sub-menu-toggle.activated:before {
+  content: "\f142"; }
+
+.js .nav-primary .genesis-nav-menu .menu-item,
+.js .site-header .genesis-nav-menu .menu-item {
+  display: block;
+  float: none;
+  margin: 0;
+  position: relative;
+  text-align: left; }
+
+.js .genesis-nav-menu .menu-item:hover {
+  position: relative; }
+
+.js .nav-primary .genesis-nav-menu .menu-item a,
+.js .site-header .genesis-nav-menu .menu-item a {
+  display: block;
+  border: none;
+  padding: 0.5em 0;
+  width: 100%;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  color: #fff; }
+
+.js .genesis-nav-menu .sub-menu {
+  border: none; }
+
+.js .genesis-nav-menu .menu-item > a:focus ul.sub-menu,
+.js .genesis-nav-menu .menu-item > a:focus ul.sub-menu .sub-menu {
+  left: 0;
+  margin-left: 0; }
+
+.js .genesis-nav-menu > .menu-item-has-children > a:after {
+  content: none; }
+
+.js .genesis-nav-menu .sub-menu {
+  clear: both;
+  display: none;
+  margin: 0;
+  opacity: 1;
+  padding-left: 15px;
+  position: static;
+  width: 100%; }
+
+.js .genesis-nav-menu .sub-menu .sub-menu {
+  margin: 0; }
+
+.js nav button:hover,
+.js .menu-toggle:hover,
+.js nav button:focus,
+.js .menu-toggle:focus,
+.js .nav-primary {
+  background-color: #539D39;
+  color: #fff;
+  outline: none; }
+
+@media screen and (min-width: 50em) {
+  .menu-toggle,
+  .sub-menu-toggle {
+    display: none; }
+  .js nav.nav-primary,
+  .js .site-header nav,
+  nav.nav-primary,
+  .site-header nav {
+    display: block; }
+  .js .nav-primary,
+  .nav-primary {
+    background-color: #539D39; }
+    .js .nav-primary .js .genesis-nav-menu,
+    .js .nav-primary .genesis-nav-menu,
+    .nav-primary .js .genesis-nav-menu,
+    .nav-primary .genesis-nav-menu {
+      float: right;
+      padding: 1em 0; }
+      .js .nav-primary .js .genesis-nav-menu .menu-item,
+      .js .nav-primary .genesis-nav-menu .menu-item,
+      .nav-primary .js .genesis-nav-menu .menu-item,
+      .nav-primary .genesis-nav-menu .menu-item {
+        display: inline-block;
+        text-align: left; }
+        .js .nav-primary .js .genesis-nav-menu .menu-item:hover > .sub-menu,
+        .js .nav-primary .genesis-nav-menu .menu-item:hover > .sub-menu,
+        .nav-primary .js .genesis-nav-menu .menu-item:hover > .sub-menu,
+        .nav-primary .genesis-nav-menu .menu-item:hover > .sub-menu {
+          left: auto;
+          opacity: 1; }
+        .js .nav-primary .js .genesis-nav-menu .menu-item a,
+        .js .nav-primary .genesis-nav-menu .menu-item a,
+        .nav-primary .js .genesis-nav-menu .menu-item a,
+        .nav-primary .genesis-nav-menu .menu-item a {
+          padding: 0.5em 1em;
+          margin: 0;
+          font-size: 0.875rem; }
+          .js .nav-primary .js .genesis-nav-menu .menu-item a:hover,
+          .js .nav-primary .genesis-nav-menu .menu-item a:hover,
+          .nav-primary .js .genesis-nav-menu .menu-item a:hover,
+          .nav-primary .genesis-nav-menu .menu-item a:hover {
+            color: #c7e6bc; }
+      .js .nav-primary .js .genesis-nav-menu .menu-item-has-children,
+      .js .nav-primary .genesis-nav-menu .menu-item-has-children,
+      .nav-primary .js .genesis-nav-menu .menu-item-has-children,
+      .nav-primary .genesis-nav-menu .menu-item-has-children {
+        position: relative; }
+      .js .nav-primary .js .genesis-nav-menu .sub-menu,
+      .js .nav-primary .genesis-nav-menu .sub-menu,
+      .nav-primary .js .genesis-nav-menu .sub-menu,
+      .nav-primary .genesis-nav-menu .sub-menu {
+        position: absolute;
+        opacity: 0;
+        left: -9999px;
+        width: 100%;
+        background-color: #fff;
+        border: 1px solid #eee;
+        padding: 0; }
+        .js .nav-primary .js .genesis-nav-menu .sub-menu li,
+        .js .nav-primary .genesis-nav-menu .sub-menu li,
+        .nav-primary .js .genesis-nav-menu .sub-menu li,
+        .nav-primary .genesis-nav-menu .sub-menu li {
+          display: block; }
+        .js .nav-primary .js .genesis-nav-menu .sub-menu li a,
+        .js .nav-primary .genesis-nav-menu .sub-menu li a,
+        .nav-primary .js .genesis-nav-menu .sub-menu li a,
+        .nav-primary .genesis-nav-menu .sub-menu li a {
+          width: 100%;
+          color: #444; }
+          .js .nav-primary .js .genesis-nav-menu .sub-menu li a:hover,
+          .js .nav-primary .genesis-nav-menu .sub-menu li a:hover,
+          .nav-primary .js .genesis-nav-menu .sub-menu li a:hover,
+          .nav-primary .genesis-nav-menu .sub-menu li a:hover {
+            color: #539D39; }
+        .js .nav-primary .js .genesis-nav-menu .sub-menu .sub-menu,
+        .js .nav-primary .genesis-nav-menu .sub-menu .sub-menu,
+        .nav-primary .js .genesis-nav-menu .sub-menu .sub-menu,
+        .nav-primary .genesis-nav-menu .sub-menu .sub-menu {
+          margin: -1.5625em 0 0 100%; } }
+
+/* ## Footer
+--------------------------------------------- */
+/* ## Full Width Pages
+--------------------------------------------- */
+.full-width-content .content-sidebar-wrap {
+  max-width: 75em;
+  margin: 0 auto; }

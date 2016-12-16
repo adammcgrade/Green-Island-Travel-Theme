@@ -64,21 +64,25 @@ function green_island_travel_and_tours_setup() {
 	// Unregister secondary sidebar widget
 	unregister_sidebar( 'sidebar-alt' );
 
-}
 
-// Dont show sidebar on certain pages
-add_action( 'genesis_before_loop', 'green_island_travel_and_tours_sidebar_hook' );
+	// Enqueue Scripts and Styles
+	add_action( 'wp_enqueue_scripts', 'custom_enqueue_scripts_styles' );
+	function custom_enqueue_scripts_styles() {
+		wp_enqueue_style( 'google-fonts', '//fonts.googleapis.com/css?family=Source+Sans+Pro:400,400i,600,700,700i', array(), CHILD_THEME_VERSION );
 
-/**
- * Dont show the sidebar on certain pages
- *
- * Hides the sidebar on the home and search pages.
- * 
- * @since 1.0.0
- */
-function green_island_travel_and_tours_sidebar_hook() {
-	if( is_home() || is_search() ) {
-		remove_action( 'genesis_sidebar' , 'genesis_do_sidebar' );
+		wp_enqueue_style( 'dashicons' );
+
+		wp_enqueue_script( 'genesis-sample-responsive-menu', get_stylesheet_directory_uri() . '/js/responsive-menu.js', array( 'jquery' ), '1.0.0', true );
+		$output = array(
+			'mainMenu' => __( 'Menu', 'genesis-sample' ),
+			'subMenu'  => __( 'Menu', 'genesis-sample' ),
+		);
+		wp_localize_script( 'genesis-sample-responsive-menu', 'genesisSampleL10n', $output );
+
 	}
+
+
+
 }
+
 

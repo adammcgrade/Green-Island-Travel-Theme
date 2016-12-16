@@ -1,0 +1,161 @@
+/* ## Typographical Elements
+--------------------------------------------- */
+
+html {
+	font-size: 100%;
+}
+
+body {
+	background-color: $site-bgcolour;
+	color: $default-text-colour;
+	font-family: $default-font-family;
+	-webkit-font-smoothing: antialiased;
+	font-weight: $default-font-weight;
+	line-height: $default-line-height;
+	margin: 0;
+}
+
+a,
+button,
+input:focus,
+input[type="button"],
+input[type="reset"],
+input[type="submit"],
+textarea:focus,
+.button,
+.gallery img {
+	-webkit-transition: all 0.1s ease-in-out;
+	-moz-transition:    all 0.1s ease-in-out;
+	-ms-transition:     all 0.1s ease-in-out;
+	-o-transition:      all 0.1s ease-in-out;
+	transition:         all 0.1s ease-in-out;
+}
+
+a {
+	color: $default-link-colour;
+	text-decoration: none;
+}
+
+a:hover,
+a:focus {
+	color: $default-link-colour-active;
+	text-decoration: underline;
+}
+
+p {
+	margin: 0 0 1.3em;
+	padding: 0;
+}
+
+ol,
+ul {
+	margin: 0;
+	padding: 0;
+}
+
+li {
+	list-style-type: none;
+}
+
+hr {
+	border: 0;
+	border-collapse: collapse;
+	border-top: 1px solid #eee;
+	clear: both;
+	margin: 1em 0;
+}
+
+b,
+strong {
+	font-weight: 700;
+}
+
+blockquote,
+cite,
+em,
+i {
+	font-style: italic;
+}
+
+blockquote {
+	margin: 40px;
+}
+
+blockquote::before {
+	content: "\201C";
+	display: block;
+	font-size: 3rem;
+	height: 0;
+	left: -20px;
+	position: relative;
+	top: -10px;
+}
+
+
+/* ## Headings
+--------------------------------------------- */
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-family: $default-heading-font-family;
+	font-weight: $default-heading-font-weight;
+	line-height: $default-heading-line-height;
+	color: $default-heading-text-colour;
+	margin: 0 0 0.75rem;
+}
+
+h1 {
+	font-size: 2em;
+}
+
+h2 {
+	font-size: 1.625em;
+}
+
+h3 {
+	font-size: 1.375em;
+}
+
+h4 {
+	font-size: 1.125em;
+}
+
+h5 {
+	font-size: 1.025em;
+}
+
+h6 {
+	font-size: 1em;
+}
+
+
+@media screen and (min-width: 50em) {
+	h1 {
+		font-size: 4.232em;
+	}
+
+	h2 {
+		font-size: 3.175em;		
+	}
+
+	h3 {
+		font-size: 2.369em;	
+	}
+
+	h4 {
+		font-size: 1.7777em;	
+	}
+
+	h5 {
+		font-size: 1.333em;
+	}
+
+	h6 {
+		font-size: 1em;
+	}
+
+}

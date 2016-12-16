@@ -1,0 +1,259 @@
+	.js nav.nav-primary,
+	.js .site-header nav  {
+		display: none;
+		position: relative;
+	}
+
+	.js .site-header nav .wrap {
+		padding: 0;
+	}
+
+	.js nav.pagination {
+		display: block;
+	}
+
+	.js nav.nav-primary, 
+	nav.nav-primary {
+		padding-bottom: 1em;
+	}
+
+
+	.menu-toggle,
+	.sub-menu-toggle {
+		border-width: 0;
+		background-color: $brand-primary;
+		color: #fff;
+		display: block;
+		margin: 0 auto;
+		overflow: hidden;
+		text-align: center;
+		visibility: visible;
+	}
+	
+	.sub-menu-toggle:hover,
+	.sub-menu-toggle:focus {
+		border-width: 0;
+	}
+
+	.menu-toggle {
+		line-height: 20px;
+		position: relative;
+		right: 0;
+		z-index: 1000;
+		width: 100%;
+	}
+
+	.site-header .menu-toggle {
+		border: 0;
+	}
+
+	.menu-toggle:before,
+	.menu-toggle.activated:before {
+		margin-right: 10px;
+		text-rendering: auto;
+		-webkit-transform: translate(0, 0);
+		-ms-transform:     translate(0, 0);
+		transform:         translate(0, 0);
+	}
+
+	.sub-menu-toggle {
+		float: right;
+		padding: 10px;
+		position: absolute;
+		right: 0;
+		top: 0;
+		z-index: 100;
+	}
+
+	.sub-menu-toggle:before {
+		display: inline-block;
+		text-rendering: auto;
+		-webkit-transform: translate(0, 0);
+		-ms-transform:     translate(0, 0);
+		transform:         translate(0, 0);
+	}
+
+	.sub-menu-toggle.activated:before {
+		content: "\f142";
+	}
+
+	.js .nav-primary .genesis-nav-menu .menu-item,
+	.js .site-header .genesis-nav-menu .menu-item {
+		display: block;
+		float: none;
+		margin: 0;
+		position: relative;
+		text-align: left;
+	}
+
+	.js .genesis-nav-menu .menu-item:hover {
+		position: relative;
+	}
+
+	.js .nav-primary .genesis-nav-menu .menu-item a,
+	.js .site-header .genesis-nav-menu .menu-item a {
+		display: block;
+		border: none;
+		padding: 0.5em 0;
+		width: 100%;
+		font-weight: 600;
+		text-transform: uppercase;
+		letter-spacing: 0.5px;
+		text-decoration: none;
+		color: $nav-links-colour;
+	}
+
+	.js .genesis-nav-menu .sub-menu {
+		border: none;
+	}
+
+	.js .genesis-nav-menu .menu-item > a:focus ul.sub-menu,
+	.js .genesis-nav-menu .menu-item > a:focus ul.sub-menu .sub-menu {
+		left: 0;
+		margin-left: 0;
+	}
+
+	.js .genesis-nav-menu > .menu-item-has-children > a:after {
+		content: none;
+	}
+
+	.js .genesis-nav-menu .sub-menu {
+		clear: both;
+		display: none;
+		margin: 0;
+		opacity: 1;
+		padding-left: 15px;
+		position: static;
+		width: 100%;
+	}
+
+	.js .genesis-nav-menu .sub-menu .sub-menu {
+		margin: 0;
+	}
+
+	.js nav button:hover,
+	.js .menu-toggle:hover,
+	.js nav button:focus,
+	.js .menu-toggle:focus,
+	.js .nav-primary {
+		background-color: $brand-primary;
+		color: #fff;
+		outline: none;
+	}
+
+// .menu-toggle {
+// 	width: 100%;
+// 	align-items: center;
+// 	justify-content: center;
+// 	text-transform: uppercase;
+// 	text-align: center;
+// 	background-color: transparent;
+// 	color: inherit;
+
+// 	&:hover,
+// 	&:focus {
+// 		background-color: transparent;
+// 		color: inherit;
+// 	}
+	
+// }
+
+// .genesis-nav-menu {
+// 	a {
+// 		display: inline-block;
+// 		text-transform: uppercase;
+// 		letter-spacing: 0.5px;
+// 		font-weight: 600;
+// 		padding: 0.25em 0;
+// 	}
+
+// 	.sub-menu {
+// 		margin-left: 0.5em;
+// 	}
+
+// }
+
+
+
+
+@media screen and (min-width: 50em) {
+
+	.menu-toggle,
+	.sub-menu-toggle {
+		display: none;
+	}
+
+	.js nav.nav-primary, 
+	.js .site-header nav,
+	nav.nav-primary,
+	.site-header nav {
+		display: block;
+	}
+	
+	.js .nav-primary,
+	.nav-primary {
+		background-color: $navbar-bgcolour;
+
+		.js .genesis-nav-menu,
+		.genesis-nav-menu {
+			float: right;
+			padding: 1em 0;
+
+			.menu-item {
+				display: inline-block;
+				text-align: left;
+
+				&:hover > .sub-menu {
+					left: auto;
+					opacity: 1;
+				}
+
+				a {
+					padding: 0.5em 1em;
+					margin: 0;
+					font-size: 0.875rem;
+
+					&:hover {
+						color: lighten($navbar-bgcolour, 40%);
+					}
+				}
+			}
+		
+			.menu-item-has-children {
+				position: relative;
+			}
+
+			.sub-menu {
+				position: absolute;
+				opacity: 0;
+				left: -9999px;
+				width: 100%;
+				background-color: $navbar-dropdown-bgcolour;
+				border: 1px solid #eee;
+				padding: 0;
+
+				li {
+					display: block;
+				}
+
+				li a {
+					width: 100%;
+					color: $navbar-dropdown-links-colour;
+					&:hover {
+						color: $navbar-dropdown-links-active-colour;
+					}
+				}
+
+				.sub-menu {
+					margin: -1.5625em 0 0 100%;
+				}
+
+			}
+		}
+
+
+	}
+
+
+
+}

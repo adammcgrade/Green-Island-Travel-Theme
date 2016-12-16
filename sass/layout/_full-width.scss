@@ -1,0 +1,10 @@
+
+/* ## Full Width Pages
+--------------------------------------------- */
+
+.full-width-content {
+	.content-sidebar-wrap {
+		max-width: $site-max-content-width;
+		margin: 0 auto;
+	}
+}

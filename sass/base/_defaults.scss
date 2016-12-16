@@ -1,145 +1,7 @@
 /* # Defaults
 ---------------------------------------------------------------------------------------------------- */
 
-/* ## Typographical Elements
---------------------------------------------- */
-
-html {
-	font-size: 100%;
-}
-
-body {
-	background-color: $site-bgcolour;
-	color: $default-text-colour;
-	font-family: $default-font-family;
-	-webkit-font-smoothing: antialiased;
-	font-weight: $default-font-weight;
-	line-height: $default-line-height;
-	margin: 0;
-}
-
-a,
-button,
-input:focus,
-input[type="button"],
-input[type="reset"],
-input[type="submit"],
-textarea:focus,
-.button,
-.gallery img {
-	-webkit-transition: all 0.1s ease-in-out;
-	-moz-transition:    all 0.1s ease-in-out;
-	-ms-transition:     all 0.1s ease-in-out;
-	-o-transition:      all 0.1s ease-in-out;
-	transition:         all 0.1s ease-in-out;
-}
-
-a {
-	color: $default-link-colour;
-	text-decoration: none;
-}
-
-a:hover,
-a:focus {
-	color: $default-link-colour-active;
-	text-decoration: underline;
-}
-
-p {
-	margin: 0 0 28px;
-	padding: 0;
-}
-
-ol,
-ul {
-	margin: 0;
-	padding: 0;
-}
-
-li {
-	list-style-type: none;
-}
-
-hr {
-	border: 0;
-	border-collapse: collapse;
-	border-top: 1px solid #eee;
-	clear: both;
-	margin: 1em 0;
-}
-
-b,
-strong {
-	font-weight: 700;
-}
-
-blockquote,
-cite,
-em,
-i {
-	font-style: italic;
-}
-
-blockquote {
-	margin: 40px;
-}
-
-blockquote::before {
-	content: "\201C";
-	display: block;
-	font-size: 30px;
-	font-size: 3rem;
-	height: 0;
-	left: -20px;
-	position: relative;
-	top: -10px;
-}
-
-
-/* ## Headings
---------------------------------------------- */
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-	font-family: 'Source Sans Pro', sans-serif;
-	font-weight: 600;
-	line-height: 1.2;
-	margin: 0 0 10px;
-}
-
-h1 {
-	font-size: 36px;
-	font-size: 3.6rem;
-}
-
-h2 {
-	font-size: 30px;
-	font-size: 3rem;
-}
-
-h3 {
-	font-size: 24px;
-	font-size: 2.4rem;
-}
-
-h4 {
-	font-size: 20px;
-	font-size: 2rem;
-}
-
-h5 {
-	font-size: 18px;
-	font-size: 1.8rem;
-}
-
-h6 {
-	font-size: 16px;
-	font-size: 1.6rem;
-}
+@import 'typography';
 
 /* ## Objects
 --------------------------------------------- */
@@ -241,8 +103,7 @@ textarea {
 	background-color: #fff;
 	border: 1px solid #ddd;
 	color: #333;
-	font-size: 18px;
-	font-size: 1.8rem;
+	font-size: 1em;
 	font-weight: 400;
 	padding: 16px;
 	width: 100%;
@@ -278,8 +139,7 @@ input[type="submit"],
 	border: 0;
 	color: #fff;
 	cursor: pointer;
-	font-size: 16px;
-	font-size: 1.6rem;
+	font-size: 1em;
 	font-weight: 700;
 	padding: 16px 24px;
 	text-decoration: none;
@@ -409,4 +269,23 @@ th:first-child {
 
 .more-link {
     position: relative;
+}
+
+/* # Skip Links
+---------------------------------------------------------------------------------------------------- */
+
+.genesis-skip-link {
+	margin: 0;
+}
+
+.genesis-skip-link li {
+	height: 0;
+	width: 0;
+	list-style: none;
+}
+
+/* Display outline on focus */
+:focus {
+	color: #333;
+	outline: #ccc solid 1px;
 }
