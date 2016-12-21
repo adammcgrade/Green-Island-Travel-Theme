@@ -10,12 +10,8 @@
 // 	padding: 0 1em;
 // }
 
-.wrap {
+.wrap,
+.content-sidebar-wrap  {
 	max-width: $site-max-content-width;
 	margin: 0 auto;
-}
-
-.wrap,
-.content-sidebar-wrap {
-	padding: 0 1em;
 }

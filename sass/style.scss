@@ -39,6 +39,10 @@
 	- Navigation
 	- Footer
 	- Full Width Pages
+- Modules
+	- Horizontal Newsletter Signup Form
+- Pages
+	- Front Page		
 */
 
 
@@ -54,3 +58,5 @@
 @import 'layout/navigation';
 @import 'layout/footer';
 @import 'layout/full-width';
+@import 'modules/horizontal-newsletter-signup';
+@import 'pages/front-page';

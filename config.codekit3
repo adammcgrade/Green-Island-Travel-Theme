@@ -7,7 +7,7 @@
 		"uuidString": "7EBF68B9-E80F-43CD-BAEE-4A3ED7DC79C1"
 		}
 	],
-"creatorBuild": "25444",
+"creatorBuild": "25479",
 "files": {
 	"\/front-page.php": {
 		"ft": 8192,
@@ -20,6 +20,14 @@
 		"oA": 2,
 		"oAP": "\/functions.php",
 		"oF": 0
+		},
+	"\/images\/green_island_travel_and_tours_logo@2x.png": {
+		"ft": 32768,
+		"iS": 92815,
+		"oA": 0,
+		"oAP": "\/images\/green_island_travel_and_tours_logo@2x.png",
+		"oF": 0,
+		"opt": 0
 		},
 	"\/js\/responsive-menu.js": {
 		"ft": 64,
@@ -169,6 +177,32 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "\/sass\/layout\/_structure.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/sass\/modules\/_horizontal-newsletter-signup.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/sass\/modules\/_horizontal-newsletter-signup.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/sass\/pages\/_front-page.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/sass\/pages\/_front-page.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -688,6 +722,10 @@
 			"active": 0,
 			"optionString": "{'properties': 'always'}"
 			},
+		"capitalized-comments": {
+			"active": 0,
+			"optionString": "'always', {'ignoreInlineComments': false, 'ignoreConsecutiveComments': false}"
+			},
 		"class-methods-use-this": {
 			"active": 0,
 			"optionString": "{'exceptMethods': []}"
@@ -851,6 +889,10 @@
 		"max-statements": {
 			"active": 0,
 			"optionString": "{'max': 10}, {'ignoreTopLevelFunctions': true}"
+			},
+		"max-statements-per-line": {
+			"active": 0,
+			"optionString": "{'max': 1}"
 			},
 		"multiline-ternary": {
 			"active": 0,
@@ -1216,6 +1258,10 @@
 			"active": 0,
 			"optionString": "'except-parens'"
 			},
+		"no-return-await": {
+			"active": 0,
+			"optionString": ""
+			},
 		"no-script-url": {
 			"active": 0,
 			"optionString": ""
@@ -1447,6 +1493,10 @@
 		"radix": {
 			"active": 0,
 			"optionString": "'always'"
+			},
+		"require-await": {
+			"active": 0,
+			"optionString": ""
 			},
 		"require-jsdoc": {
 			"active": 0,
@@ -2280,6 +2330,10 @@
 			},
 		"space-colon": {
 			"active": 1,
+			"flagValue": -1
+			},
+		"support-ie8": {
+			"active": 0,
 			"flagValue": -1
 			},
 		"toplevel": {

@@ -37,6 +37,10 @@
 	- Navigation
 	- Footer
 	- Full Width Pages
+- Modules
+	- Horizontal Newsletter Signup Form
+- Pages
+	- Front Page		
 */
 /* # HTML5 Reset
 ---------------------------------------------------------------------------------------------------- */
@@ -682,20 +686,69 @@ img.alignright,
 ---------------------------------------------------------------------------------------------------- */
 /* ## Global Stucture
 --------------------------------------------- */
-.wrap {
+.wrap,
+.content-sidebar-wrap {
   max-width: 75em;
   margin: 0 auto; }
 
-.wrap,
-.content-sidebar-wrap {
-  padding: 0 1em; }
-
 /* ## Header
 --------------------------------------------- */
-.site-header {
-  background-color: #fff; }
-  .site-header .site-logo {
-    width: 150px; }
+.site-header .site-title {
+  margin: 0;
+  padding: 0.25em 0;
+  text-align: center; }
+  .site-header .site-title img {
+    width: 140px;
+    height: auto; }
+
+.site-header .site-description {
+  text-indent: -9999px;
+  height: 0;
+  margin: 0; }
+
+.site-header .widget-area {
+  display: none; }
+
+.site-header .header-widget-area {
+  padding: 0.5em 0; }
+  .site-header .header-widget-area .tel,
+  .site-header .header-widget-area .email {
+    display: block;
+    text-align: center;
+    font-size: 0.875em; }
+    .site-header .header-widget-area .tel a,
+    .site-header .header-widget-area .email a {
+      color: inherit;
+      font-weight: 600; }
+
+@media screen and (min-width: 50em) {
+  .site-header {
+    padding: 0.5em 1em; }
+    .site-header .wrap {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-align: center;
+          -ms-flex-align: center;
+              align-items: center; }
+    .site-header .title-area {
+      padding: 0;
+      -webkit-box-flex: 1;
+          -ms-flex: 1;
+              flex: 1; }
+    .site-header .site-title {
+      text-align: left;
+      padding: 0; }
+    .site-header .widget-area {
+      display: block;
+      padding: 0; }
+    .site-header .header-widget-area .tel,
+    .site-header .header-widget-area .email {
+      text-align: right; } }
+
+@media screen and (min-width: 75em) {
+  .site-header {
+    padding: 0.5em 0; } }
 
 .js nav.nav-primary,
 .js .site-header nav {
@@ -710,12 +763,14 @@ img.alignright,
 
 .js nav.nav-primary,
 nav.nav-primary {
-  padding-bottom: 1em; }
+  padding: 1em;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: #56a55f; }
 
 .menu-toggle,
 .sub-menu-toggle {
   border-width: 0;
-  background-color: #539D39;
+  background-color: #56a55f;
   color: #fff;
   display: block;
   margin: 0 auto;
@@ -739,7 +794,7 @@ nav.nav-primary {
 
 .menu-toggle:before,
 .menu-toggle.activated:before {
-  margin-right: 10px;
+  margin-right: 0.25em;
   text-rendering: auto;
   -webkit-transform: translate(0, 0);
   transform: translate(0, 0); }
@@ -812,7 +867,7 @@ nav.nav-primary {
 .js nav button:focus,
 .js .menu-toggle:focus,
 .js .nav-primary {
-  background-color: #539D39;
+  background-color: #56a55f;
   color: #fff;
   outline: none; }
 
@@ -825,81 +880,176 @@ nav.nav-primary {
   nav.nav-primary,
   .site-header nav {
     display: block; }
-  .js .nav-primary,
-  .nav-primary {
-    background-color: #539D39; }
-    .js .nav-primary .js .genesis-nav-menu,
-    .js .nav-primary .genesis-nav-menu,
-    .nav-primary .js .genesis-nav-menu,
-    .nav-primary .genesis-nav-menu {
+  .js nav.nav-primary,
+  nav.nav-primary {
+    border: 0;
+    padding: 0; }
+    .js nav.nav-primary .js .genesis-nav-menu,
+    .js nav.nav-primary .genesis-nav-menu,
+    nav.nav-primary .js .genesis-nav-menu,
+    nav.nav-primary .genesis-nav-menu {
       float: right;
-      padding: 1em 0; }
-      .js .nav-primary .js .genesis-nav-menu .menu-item,
-      .js .nav-primary .genesis-nav-menu .menu-item,
-      .nav-primary .js .genesis-nav-menu .menu-item,
-      .nav-primary .genesis-nav-menu .menu-item {
+      padding: 1em; }
+      .js nav.nav-primary .js .genesis-nav-menu .menu-item,
+      .js nav.nav-primary .genesis-nav-menu .menu-item,
+      nav.nav-primary .js .genesis-nav-menu .menu-item,
+      nav.nav-primary .genesis-nav-menu .menu-item {
         display: inline-block;
         text-align: left; }
-        .js .nav-primary .js .genesis-nav-menu .menu-item:hover > .sub-menu,
-        .js .nav-primary .genesis-nav-menu .menu-item:hover > .sub-menu,
-        .nav-primary .js .genesis-nav-menu .menu-item:hover > .sub-menu,
-        .nav-primary .genesis-nav-menu .menu-item:hover > .sub-menu {
+        .js nav.nav-primary .js .genesis-nav-menu .menu-item:hover > .sub-menu,
+        .js nav.nav-primary .genesis-nav-menu .menu-item:hover > .sub-menu,
+        nav.nav-primary .js .genesis-nav-menu .menu-item:hover > .sub-menu,
+        nav.nav-primary .genesis-nav-menu .menu-item:hover > .sub-menu {
           left: auto;
           opacity: 1; }
-        .js .nav-primary .js .genesis-nav-menu .menu-item a,
-        .js .nav-primary .genesis-nav-menu .menu-item a,
-        .nav-primary .js .genesis-nav-menu .menu-item a,
-        .nav-primary .genesis-nav-menu .menu-item a {
+        .js nav.nav-primary .js .genesis-nav-menu .menu-item a,
+        .js nav.nav-primary .genesis-nav-menu .menu-item a,
+        nav.nav-primary .js .genesis-nav-menu .menu-item a,
+        nav.nav-primary .genesis-nav-menu .menu-item a {
           padding: 0.5em 1em;
           margin: 0;
           font-size: 0.875rem; }
-          .js .nav-primary .js .genesis-nav-menu .menu-item a:hover,
-          .js .nav-primary .genesis-nav-menu .menu-item a:hover,
-          .nav-primary .js .genesis-nav-menu .menu-item a:hover,
-          .nav-primary .genesis-nav-menu .menu-item a:hover {
-            color: #c7e6bc; }
-      .js .nav-primary .js .genesis-nav-menu .menu-item-has-children,
-      .js .nav-primary .genesis-nav-menu .menu-item-has-children,
-      .nav-primary .js .genesis-nav-menu .menu-item-has-children,
-      .nav-primary .genesis-nav-menu .menu-item-has-children {
+          .js nav.nav-primary .js .genesis-nav-menu .menu-item a:hover,
+          .js nav.nav-primary .genesis-nav-menu .menu-item a:hover,
+          nav.nav-primary .js .genesis-nav-menu .menu-item a:hover,
+          nav.nav-primary .genesis-nav-menu .menu-item a:hover {
+            color: #dbecdd; }
+      .js nav.nav-primary .js .genesis-nav-menu .menu-item-has-children,
+      .js nav.nav-primary .genesis-nav-menu .menu-item-has-children,
+      nav.nav-primary .js .genesis-nav-menu .menu-item-has-children,
+      nav.nav-primary .genesis-nav-menu .menu-item-has-children {
         position: relative; }
-      .js .nav-primary .js .genesis-nav-menu .sub-menu,
-      .js .nav-primary .genesis-nav-menu .sub-menu,
-      .nav-primary .js .genesis-nav-menu .sub-menu,
-      .nav-primary .genesis-nav-menu .sub-menu {
+      .js nav.nav-primary .js .genesis-nav-menu .sub-menu,
+      .js nav.nav-primary .genesis-nav-menu .sub-menu,
+      nav.nav-primary .js .genesis-nav-menu .sub-menu,
+      nav.nav-primary .genesis-nav-menu .sub-menu {
         position: absolute;
         opacity: 0;
         left: -9999px;
         width: 100%;
         background-color: #fff;
         border: 1px solid #eee;
-        padding: 0; }
-        .js .nav-primary .js .genesis-nav-menu .sub-menu li,
-        .js .nav-primary .genesis-nav-menu .sub-menu li,
-        .nav-primary .js .genesis-nav-menu .sub-menu li,
-        .nav-primary .genesis-nav-menu .sub-menu li {
+        padding: 0;
+        z-index: 999; }
+        .js nav.nav-primary .js .genesis-nav-menu .sub-menu li,
+        .js nav.nav-primary .genesis-nav-menu .sub-menu li,
+        nav.nav-primary .js .genesis-nav-menu .sub-menu li,
+        nav.nav-primary .genesis-nav-menu .sub-menu li {
           display: block; }
-        .js .nav-primary .js .genesis-nav-menu .sub-menu li a,
-        .js .nav-primary .genesis-nav-menu .sub-menu li a,
-        .nav-primary .js .genesis-nav-menu .sub-menu li a,
-        .nav-primary .genesis-nav-menu .sub-menu li a {
+        .js nav.nav-primary .js .genesis-nav-menu .sub-menu li a,
+        .js nav.nav-primary .genesis-nav-menu .sub-menu li a,
+        nav.nav-primary .js .genesis-nav-menu .sub-menu li a,
+        nav.nav-primary .genesis-nav-menu .sub-menu li a {
           width: 100%;
           color: #444; }
-          .js .nav-primary .js .genesis-nav-menu .sub-menu li a:hover,
-          .js .nav-primary .genesis-nav-menu .sub-menu li a:hover,
-          .nav-primary .js .genesis-nav-menu .sub-menu li a:hover,
-          .nav-primary .genesis-nav-menu .sub-menu li a:hover {
-            color: #539D39; }
-        .js .nav-primary .js .genesis-nav-menu .sub-menu .sub-menu,
-        .js .nav-primary .genesis-nav-menu .sub-menu .sub-menu,
-        .nav-primary .js .genesis-nav-menu .sub-menu .sub-menu,
-        .nav-primary .genesis-nav-menu .sub-menu .sub-menu {
-          margin: -1.5625em 0 0 100%; } }
+          .js nav.nav-primary .js .genesis-nav-menu .sub-menu li a:hover,
+          .js nav.nav-primary .genesis-nav-menu .sub-menu li a:hover,
+          nav.nav-primary .js .genesis-nav-menu .sub-menu li a:hover,
+          nav.nav-primary .genesis-nav-menu .sub-menu li a:hover {
+            color: #56a55f; }
+        .js nav.nav-primary .js .genesis-nav-menu .sub-menu .sub-menu,
+        .js nav.nav-primary .genesis-nav-menu .sub-menu .sub-menu,
+        nav.nav-primary .js .genesis-nav-menu .sub-menu .sub-menu,
+        nav.nav-primary .genesis-nav-menu .sub-menu .sub-menu {
+          margin: -2.25em 0 0 100%; } }
 
 /* ## Footer
 --------------------------------------------- */
 /* ## Full Width Pages
 --------------------------------------------- */
 .full-width-content .content-sidebar-wrap {
-  max-width: 75em;
-  margin: 0 auto; }
+  max-width: initial;
+  margin: initial; }
+
+/* # Modules
+---------------------------------------------------------------------------------------------------- */
+/* ## Horizontal Newsletter Signup Form
+--------------------------------------------- */
+.horizontal-newsletter-signup {
+  padding: 1.25em;
+  background-color: #eee; }
+  .horizontal-newsletter-signup .enews {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    max-width: 75em;
+    margin: 0 auto; }
+  .horizontal-newsletter-signup .widget-title {
+    margin-bottom: 1em;
+    font-size: 1.25em;
+    text-align: center;
+    text-transform: uppercase; }
+  .horizontal-newsletter-signup form {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100%; }
+  .horizontal-newsletter-signup .enews-widget input {
+    margin-bottom: 0.5em;
+    margin-right: 0.875em;
+    padding: 0.816em;
+    line-height: 1;
+    font-size: 1em;
+    -webkit-box-flex: 3;
+        -ms-flex: 3;
+            flex: 3;
+    border-radius: 2px; }
+  .horizontal-newsletter-signup .enews-widget input[type="submit"] {
+    margin-right: 0;
+    padding: 1em 4em;
+    background-color: #d6aa49;
+    border: 0;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    text-transform: uppercase; }
+    .horizontal-newsletter-signup .enews-widget input[type="submit"]:hover {
+      background-color: #d1a034;
+      color: #eee; }
+
+@media screen and (min-width: 42em) {
+  .horizontal-newsletter-signup form {
+    max-width: 50%; } }
+
+@media screen and (min-width: 64em) {
+  .horizontal-newsletter-signup .enews, .horizontal-newsletter-signup form {
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row; }
+  .horizontal-newsletter-signup form {
+    max-width: 100%; }
+  .horizontal-newsletter-signup .widget-title {
+    font-size: 1.1em;
+    margin-bottom: 0;
+    margin-right: 1.5em; }
+  .horizontal-newsletter-signup .enews-widget input {
+    margin-bottom: 0; } }
+
+/* # Pages
+---------------------------------------------------------------------------------------------------- */
+/* ## Front Page
+--------------------------------------------- */
+.home .horizontal-newsletter-signup {
+  background-color: #56a55f;
+  color: #fff; }
+
+.home .widget-title {
+  color: inherit; }

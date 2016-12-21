@@ -2,9 +2,68 @@
 --------------------------------------------- */
 
 .site-header{
-	background-color: $header-bgcolour;
-	.site-logo {
-		width: 150px;
+	.site-title {
+		margin: 0;
+		padding: 0.25em 0;
+		text-align: center;
+		img {
+			width: 140px;
+			height: auto;
+		}
 	}
+	.site-description {
+		text-indent: -9999px;
+		height: 0;
+		margin: 0;
+	}
+	.widget-area {
+		display: none;
+	}
+	.header-widget-area {
+		padding: 0.5em 0;
+		.tel,
+		.email {
+			display: block;
+			text-align: center;
+			font-size: 0.875em;
+			a {
+				color: inherit;
+				font-weight: 600;
+			}
+		}
+	}
+}
 
+@media screen and (min-width: 50em) {
+	.site-header {
+		padding: 0.5em 1em;
+		.wrap {
+			display: flex;
+			align-items: center;
+		}
+		.title-area {
+			padding: 0;
+			flex: 1;
+		}
+		.site-title {
+			text-align: left;
+			padding: 0;
+		}
+		.widget-area {
+			display: block;
+			padding: 0;
+		}
+		.header-widget-area {
+			.tel,
+			.email {
+				text-align: right;
+			}
+		}
+	}
+}
+
+@media screen and (min-width: 75em) {
+	.site-header {
+		padding: 0.5em 0;
+	}
 }

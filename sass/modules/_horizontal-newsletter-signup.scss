@@ -1,0 +1,85 @@
+/* # Modules
+---------------------------------------------------------------------------------------------------- */
+
+/* ## Horizontal Newsletter Signup Form
+--------------------------------------------- */
+
+.horizontal-newsletter-signup {
+	padding: 1.25em;
+	background-color: #eee;
+
+	.enews {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		max-width: 75em;
+		margin: 0 auto;
+	}
+
+	.widget-title {
+		margin-bottom: 1em;
+		font-size: 1.25em;
+		text-align: center;
+		text-transform: uppercase;
+	}
+
+	form {
+		display: flex;
+		flex: 1;
+		flex-direction: column;
+		width: 100%;
+	}
+
+	.enews-widget input {
+		margin-bottom: 0.5em;
+		margin-right: 0.875em;
+		padding: 0.816em;
+		line-height: 1;
+		font-size: 1em;
+		flex: 3;
+		border-radius: 2px;
+	}
+
+	.enews-widget input[type="submit"] {
+		margin-right: 0;
+		padding: 1em 4em;
+		background-color: $brand-contrast;
+		border: 0;
+		flex: 1;
+		text-transform: uppercase;
+
+		&:hover {
+			background-color: darken($brand-contrast, 5%);
+			color: #eee;
+		}
+	}
+
+}
+
+@media screen and (min-width: 42em) {
+	.horizontal-newsletter-signup {
+		form {
+			max-width: 50%;
+		}
+	}
+}
+
+@media screen and (min-width: 64em) {
+	.horizontal-newsletter-signup {
+		.enews, form {
+			flex-direction: row;
+		}
+		form {
+			max-width: 100%;
+		}
+		.widget-title {
+			font-size: 1.1em;
+			margin-bottom: 0;
+			margin-right: 1.5em;
+		}
+		.enews-widget input {
+			margin-bottom: 0;
+		}
+	}
+}
