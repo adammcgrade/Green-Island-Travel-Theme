@@ -93,7 +93,9 @@
 	}
 
 	.js .nav-primary .genesis-nav-menu .menu-item a,
-	.js .site-header .genesis-nav-menu .menu-item a {
+	.nav-primary .genesis-nav-menu .menu-item a,
+	.js .site-header .genesis-nav-menu .menu-item a,
+	.site-header .genesis-nav-menu .menu-item a {
 		display: block;
 		border: none;
 		padding: 0.5em 0;
